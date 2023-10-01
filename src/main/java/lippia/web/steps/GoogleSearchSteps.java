@@ -5,6 +5,7 @@ import io.cucumber.java.en.*;
 import lippia.web.services.GoogleHomeService;
 import lippia.web.services.GoogleSearchResultService;
 
+
 public class GoogleSearchSteps extends PageSteps {
 
     @Given("^The client is on google page$")
@@ -22,6 +23,7 @@ public class GoogleSearchSteps extends PageSteps {
     public void search(String criteria) {
         GoogleHomeService.enterSearchCriteria(criteria);
         GoogleHomeService.clickSearchButton();
+        GoogleHomeService.clickCrowdar();
     }
 
     @Then("The client verify that results are shown properly")
