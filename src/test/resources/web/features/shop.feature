@@ -2,7 +2,7 @@
 Feature: SHOP
 
   Background:
-    Given the client is on “http://practice.automationtesting.in/”
+    Given the client is on page Automation
 
   @testCase1
   Scenario: Shop-Filter By Price Funcionality
@@ -11,14 +11,14 @@ Feature: SHOP
     And the client Clicks on "Filter"
     Then the client can view books only between 150 to 450 rps price
 
-  @testCase2
+  @testCase2 @Smoke
   Scenario: Shop-Product Categories Funcionality
-    When the client Clicks on "Shop"
-    And the client does Click on "Android" from PRODUCT CATEGORIES
-    Then the client can view books only from categories "Android"
+    When the client Clicks on Shop
+    And the client does Click on Android from PRODUCT CATEGORIES
+    Then the client can view books only from categories Android
 
   Scenario Outline: Shop-Default Sorting Funcionality - <filter>
-    When the client Clicks on "Shop"
+    When the client Clicks on Shop
     When the client Clicks on <filter> item in Default sorting dropdown
     Then the client can view books the <category> products only
     @testCase3
