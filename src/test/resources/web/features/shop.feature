@@ -11,7 +11,7 @@ Feature: SHOP
     And the client Clicks on "Filter"
     Then the client can view books only between 150 to 450 rps price
 
-  @testCase2
+  @testCase2 @Smoke
   Scenario: Shop-Product Categories Funcionality
     When the client Clicks on Shop
     And the client does Click on Android from PRODUCT CATEGORIES
