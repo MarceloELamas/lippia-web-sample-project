@@ -21,6 +21,7 @@ public class shopResultServices extends ActionManager {
     }
 
     private static WebElement statsPopularCategory() {
+
         return getElement(shopConstants.POPULAR_CATEGORY_BOOKS);
     }
 
