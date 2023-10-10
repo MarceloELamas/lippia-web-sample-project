@@ -22,4 +22,11 @@ public class shopServices extends ActionManager {
         ActionManager.waitVisibility(shopConstants.ANDROID);
         click(shopConstants.ANDROID);
     }
+
+    public static void clickdropdown() {
+        ActionManager.waitVisibility(shopConstants.DROPDOWN);
+        click(shopConstants.DROPDOWN);
+        ActionManager.waitVisibility(shopConstants.SORT_BY_POPULARITY);
+        click(shopConstants.SORT_BY_POPULARITY);
+    }
 }

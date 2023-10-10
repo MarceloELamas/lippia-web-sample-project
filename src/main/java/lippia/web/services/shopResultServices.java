@@ -19,4 +19,17 @@ public class shopResultServices extends ActionManager {
         Assert.assertTrue(getStatsAndroid());
 
     }
+
+    private static WebElement statsPopularCategory() {
+        return getElement(shopConstants.POPULAR_CATEGORY_BOOKS);
+    }
+
+    public static boolean getStatsPopularCategory() {
+
+        return statsPopularCategory().isDisplayed();
+    }
+
+    public static void verifyResultsPopularCategory() {
+        Assert.assertTrue(getStatsPopularCategory());
+    }
 }
