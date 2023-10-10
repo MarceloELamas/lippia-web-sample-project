@@ -4,16 +4,13 @@ Feature: My Account - Login
   Background:
     Given the client is on page Automation
   @testCase1Login
-  Scenario Outline: Login OK mail <emailAddress>
+  Scenario: Login OK
     When the client Clicks on My Account
-    When the client enter <emailAddress> in Login textbox
-    When the client enter <password> in Login textbox
+    When the client enter marcelolamas2495+48@gmail.com in Login textbox
+    When the client enter P@ssw@rd2025! in Login textbox
     And the client Clicks on Login
-    Then the client can view the message Hello <user>
+    Then the client can view the message Hello marcelolamas249548
 
-    Examples:
-      | emailAddress                  | password      | user               |
-      | marcelolamas2495+48@gmail.com | P@ssw@rd2025! | marcelolamas249548 |
 
 
   Scenario Outline: Login Fail for <fail>
