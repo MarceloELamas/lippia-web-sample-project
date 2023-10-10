@@ -1,4 +1,4 @@
-@Login
+@Login @Smoke
 Feature: My Account - Login
 
   Background:
