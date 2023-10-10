@@ -13,4 +13,4 @@ Feature: My Account - Registration
     @Smoke
     Examples:
       | emailAddress                  | password      | user               |
-      | marcelolamas2495+24@gmail.com | P@ssw@rd2025! | marcelolamas249523 |
+      | marcelolamas2495+31@gmail.com | P@ssw@rd2025! | marcelolamas249531 |
