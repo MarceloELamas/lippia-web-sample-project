@@ -23,20 +23,17 @@ public class shopServices extends ActionManager {
     }
 
     public static void clickdropdown(String criteria) {
+        ActionManager.waitVisibility(shopConstants.DROPDOWN);
+        click(shopConstants.DROPDOWN);
+
         switch(criteria) {
             case "Sort by Popularity":
-                ActionManager.waitVisibility(shopConstants.DROPDOWN);
-                click(shopConstants.DROPDOWN);
                 click(shopConstants.SORT_BY_POPULARITY);
                 break;
             case "Sort by Average rating":
-                ActionManager.waitVisibility(shopConstants.DROPDOWN);
-                click(shopConstants.DROPDOWN);
                 click(shopConstants.SORT_BY_AVERAGE);
                 break;
             case "Sort by Newness":
-                ActionManager.waitVisibility(shopConstants.DROPDOWN);
-                click(shopConstants.DROPDOWN);
                 click(shopConstants.SORT_BY_NEWNESS);
                 break;
         }

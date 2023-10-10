@@ -46,18 +46,8 @@ public class shopSteps extends PageSteps {
 
     @Then("^the client can view books the (.*) products only$")
     public void popularBooksCategory(String criteria) {
-        switch(criteria) {
-            case "Popular":
-                shopResultServices.verifyResultsPopularCategory(criteria);
-                break;
-            case "Average rating":
-                shopResultServices.verifyResultsPopularCategory(criteria);
-                break;
-            case "Newness":
-                shopResultServices.verifyResultsPopularCategory(criteria);
-                break;
+        shopResultServices.verifyResultsPopularCategory(criteria);
         }
 
 
     }
-}
