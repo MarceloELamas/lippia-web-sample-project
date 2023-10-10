@@ -30,7 +30,38 @@ public class shopResultServices extends ActionManager {
         return statsPopularCategory().isDisplayed();
     }
 
-    public static void verifyResultsPopularCategory() {
-        Assert.assertTrue(getStatsPopularCategory());
+    private static WebElement statsAverageCategory() {
+
+        return getElement(shopConstants.AVERAGE_CATEGORY_BOOKS);
+    }
+
+    public static boolean getStatsAverageCategory() {
+
+        return statsAverageCategory().isDisplayed();
+    }
+
+    private static WebElement statsNewnessCategory() {
+
+        return getElement(shopConstants.NEWNESS_CATEGORY_BOOKS);
+    }
+
+    public static boolean getStatsNewnessCategory() {
+
+        return statsNewnessCategory().isDisplayed();
+    }
+
+    public static void verifyResultsPopularCategory(String criteria) {
+        switch(criteria) {
+            case "Popular":
+                Assert.assertTrue(getStatsPopularCategory());
+                break;
+            case "Average rating":
+                Assert.assertTrue(getStatsAverageCategory());
+                break;
+            case "Newness":
+                Assert.assertTrue(getStatsNewnessCategory());
+                break;
+        }
+
     }
 }

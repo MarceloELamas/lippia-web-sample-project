@@ -25,11 +25,11 @@ Feature: SHOP
     Examples:
       | filter | category |
       | Sort by Popularity | Popular |
-    @testCase4
+    @testCase4 @Smoke
     Examples:
       | filter | category |
       | Sort by Average rating | Average rating |
-    @testCase5
+    @testCase5 @Smoke
     Examples:
       | filter | category |
       | Sort by Newness | Newness |

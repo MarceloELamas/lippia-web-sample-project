@@ -35,14 +35,26 @@ public class shopSteps extends PageSteps {
             case "Sort by Popularity":
                 shopServices.clickdropdown(criteria);
                 break;
+            case "Sort by Average rating":
+                shopServices.clickdropdown(criteria);
+                break;
+            case "Sort by Newness":
+                shopServices.clickdropdown(criteria);
+                break;
         }
     }
 
     @Then("^the client can view books the (.*) products only$")
     public void popularBooksCategory(String criteria) {
         switch(criteria) {
-            case "Sort by Popularity":
-                shopResultServices.verifyResultsPopularCategory();
+            case "Popular":
+                shopResultServices.verifyResultsPopularCategory(criteria);
+                break;
+            case "Average rating":
+                shopResultServices.verifyResultsPopularCategory(criteria);
+                break;
+            case "Newness":
+                shopResultServices.verifyResultsPopularCategory(criteria);
                 break;
         }
 

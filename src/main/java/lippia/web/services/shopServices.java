@@ -27,8 +27,17 @@ public class shopServices extends ActionManager {
             case "Sort by Popularity":
                 ActionManager.waitVisibility(shopConstants.DROPDOWN);
                 click(shopConstants.DROPDOWN);
-                ActionManager.waitVisibility(shopConstants.SORT_BY_POPULARITY);
                 click(shopConstants.SORT_BY_POPULARITY);
+                break;
+            case "Sort by Average rating":
+                ActionManager.waitVisibility(shopConstants.DROPDOWN);
+                click(shopConstants.DROPDOWN);
+                click(shopConstants.SORT_BY_AVERAGE);
+                break;
+            case "Sort by Newness":
+                ActionManager.waitVisibility(shopConstants.DROPDOWN);
+                click(shopConstants.DROPDOWN);
+                click(shopConstants.SORT_BY_NEWNESS);
                 break;
         }
 
