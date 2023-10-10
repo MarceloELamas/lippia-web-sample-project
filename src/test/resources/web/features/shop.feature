@@ -21,15 +21,15 @@ Feature: SHOP
     When the client Clicks on Shop
     When the client Clicks on <filter> item in Default sorting dropdown
     Then the client can view books the <category> products only
-    @testCase3 @Smoke
+    @testCase3
     Examples:
       | filter | category |
       | Sort by Popularity | Popular |
-    @testCase4 @Smoke
+    @testCase4
     Examples:
       | filter | category |
       | Sort by Average rating | Average rating |
-    @testCase5 @Smoke
+    @testCase5
     Examples:
       | filter | category |
       | Sort by Newness | Newness |
