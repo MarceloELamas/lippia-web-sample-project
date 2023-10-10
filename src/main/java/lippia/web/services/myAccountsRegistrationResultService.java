@@ -2,7 +2,6 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 import lippia.web.constants.myAccountRegistrationConstants;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class myAccountsRegistrationResultService extends ActionManager {
