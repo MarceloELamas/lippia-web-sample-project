@@ -22,10 +22,17 @@ public class shopServices extends ActionManager {
         click(shopConstants.ANDROID);
     }
 
-    public static void clickdropdown() {
-        ActionManager.waitVisibility(shopConstants.DROPDOWN);
-        click(shopConstants.DROPDOWN);
-        ActionManager.waitVisibility(shopConstants.SORT_BY_POPULARITY);
-        click(shopConstants.SORT_BY_POPULARITY);
+    public static void clickdropdown(String criteria) {
+        switch(criteria) {
+            case "Sort by Popularity":
+                ActionManager.waitVisibility(shopConstants.DROPDOWN);
+                click(shopConstants.DROPDOWN);
+                ActionManager.waitVisibility(shopConstants.SORT_BY_POPULARITY);
+                click(shopConstants.SORT_BY_POPULARITY);
+                break;
+        }
+
+
+
     }
 }

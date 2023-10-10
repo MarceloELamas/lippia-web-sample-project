@@ -31,7 +31,11 @@ public class shopSteps extends PageSteps {
 
     @When("^the client Clicks on (.*) item in Default sorting dropdown$")
     public void clickOndropdown(String criteria) {
-        shopServices.clickdropdown();
+        switch(criteria) {
+            case "Sort by Popularity":
+                shopServices.clickdropdown(criteria);
+                break;
+        }
     }
 
     @Then("^the client can view books the (.*) products only$")
