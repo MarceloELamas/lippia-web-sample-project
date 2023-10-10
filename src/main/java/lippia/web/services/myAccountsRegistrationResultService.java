@@ -18,9 +18,21 @@ public class myAccountsRegistrationResultService extends ActionManager {
     public static String getUserDisplay(){
         return getText(myAccountRegistrationConstants.USER_DISPLAY);
     }
+    public static String getMessageDisplay(String message){
+        if (message.contains("Error: Please provide a valid email address.")){
+            return getText(myAccountRegistrationConstants.ERROR_MESSAGE_MAIL);
+        } else {
+            return getText(myAccountRegistrationConstants.ERROR_MESSAGE_PASS);
+        }
+    }
 
     public static void verifyResults(String user) {
         Assert.assertFalse(getStats());
         Assert.assertEquals(user,getUserDisplay());
     }
+
+    public static void verifyMessage(String message) {
+        Assert.assertEquals(message,getMessageDisplay(message));
+    }
+
 }

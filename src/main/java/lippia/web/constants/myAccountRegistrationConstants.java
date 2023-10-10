@@ -8,4 +8,6 @@ public class myAccountRegistrationConstants {
     public static final String PASSWORD_BOX = "xpath://*[@id='reg_password']";
     public static final String HELLO_MESSAGE = "xpath://*[text()='Hello']";
     public static final String USER_DISPLAY = "xpath://*[@id='page-36']/div/div[1]/div/p[1]/strong";
+    public static final String ERROR_MESSAGE_MAIL = "xpath://*[@id='page-36']/div/div[1]/ul/li";
+    public static final String ERROR_MESSAGE_PASS = "xpath://*[@id='page-36']/div/div[1]/ul/li";
 }
