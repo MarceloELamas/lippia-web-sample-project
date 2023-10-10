@@ -21,7 +21,7 @@ public class myAccountRegistrationSteps extends PageSteps {
     @When("^the client enter (.*) in its textbox$")
     public void theClientEnterInTextbox(String mail) {
         switch (mail) {
-            case "marcelolamas2495+31@gmail.com":
+            case "marcelolamas2495+33@gmail.com":
                 myAccountRegistrationServices.enterMail(mail);
                 break;
             case "P@ssw@rd2025!":
