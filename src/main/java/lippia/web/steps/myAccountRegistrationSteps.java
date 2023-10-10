@@ -20,14 +20,14 @@ public class myAccountRegistrationSteps extends PageSteps {
 
     @When("^the client enter (.*) in its textbox$")
     public void theClientEnterInTextbox(String mail) {
-        switch (mail) {
-            case "marcelolamas2495+33@gmail.com":
-                myAccountRegistrationServices.enterMail(mail);
-                break;
-            case "P@ssw@rd2025!":
-                myAccountRegistrationServices.enterPassword(mail);
-                break;
-    }
+
+        if (mail.contains("@gmail.com")){
+            myAccountRegistrationServices.enterMail(mail);
+
+        } else {
+            myAccountRegistrationServices.enterPassword(mail);
+        }
+
 }
 
     @Then("the client can view the message Hello (.*) in page")
