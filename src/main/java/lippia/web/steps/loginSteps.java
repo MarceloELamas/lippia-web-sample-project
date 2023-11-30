@@ -50,4 +50,6 @@ public class loginSteps extends PageSteps {
     public void theClientCanViewTheTextLOGINInPage() {
         loginResultService.verifyLoginText();
     }
+
+
 }

@@ -29,7 +29,7 @@ Feature: My Account - Login
       | emailAddress                  | password      | fail             | message                                                                                                          |
       | marcelolamas2495+48@gmail.com | p@SSw@RD2025! | Invalid Password | Error: The password you entered for the username marcelolamas2495+48@gmail.com is incorrect. Lost your password? |
 
-  @testCase8 @LogOut
+  @testCase8 @LogOut @tpFinal
   Scenario: Logout OK
     When the client Clicks on My Account
     When the client enter marcelolamas2495+48@gmail.com in Login textbox
