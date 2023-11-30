@@ -14,7 +14,7 @@ Feature: My Account
     When the client Clicks on Account Details
     Then the client can view the message Password Change
 
-    @testCase8myAccount @tpFinal @Smoke
+    @testCase8myAccount @tpFinal
     Scenario: Logout OK - My Account
       When the client Clicks on My Account
       When the client enter marcelolamas2495+48@gmail.com in Login textbox

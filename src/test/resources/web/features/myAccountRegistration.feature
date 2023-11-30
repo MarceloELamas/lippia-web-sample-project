@@ -25,7 +25,11 @@ Feature: My Account - Registration
     Examples:
       | emailAddress | password      | fail         | message                                      |
       |              | P@ssw@rd2025! | Invalid Mail | Error: Please provide a valid email address. |
-    @testCase4Registration
+    @testCase4Registration @tpFinal
     Examples:
       | emailAddress                 | password | fail             | message                                  |
       | marcelolamas2495+51@gmail.com |          | Invalid Password | Error: Please enter an account password. |
+    @testCase5Registration @tpFinal
+    Examples:
+      | emailAddress | password | fail                      | message                                      |
+      |              |          | Invalid Mail and password | Error: Please provide a valid email address. |
