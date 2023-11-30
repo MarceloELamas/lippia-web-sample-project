@@ -50,4 +50,40 @@ public class shopSteps extends PageSteps {
         }
 
 
+    @When("the client Clicks on ADDTOBASKET in product")
+    public void theClientClicksOnADDTOBASKETInProduct() {
+        shopServices.clickAddToBasket();
     }
+
+    @When("the client Clicks on CART")
+    public void theClientClicksOnCART() {
+        shopServices.clickOnCart();
+        shopServices.clickOnCart();
+    }
+
+    @When("the client Clicks on PROCED_TO_CHECKOUT")
+    public void theClientClicksOnPROCED_TO_CHECKOUT() {
+        shopServices.clickOnCheckOut();
+    }
+
+    @When("^the client Complete all inputs with (.*), (.*), (.*), (.*), (.*), (.*), (.*)$")
+    public void theClientCompleteAllInputsWith(String firstName, String lastName, String email, String phone, String address, String town, String postalCode) {
+        shopServices.addDataToInput(firstName,lastName, email, phone, address, town, postalCode);
+    }
+
+    @When("the client Clicks on Cash on Delibery")
+    public void theClientClicksOnCashOnDelibery() {
+        shopServices.clickOnDelibery();
+    }
+
+    @When("the client Clicks on Cash on Place order")
+    public void theClientClicksOnCashOnPlaceOrder() {
+        shopServices.clickOnPlaceOrder();
+        shopServices.clickOnPlaceOrder();
+    }
+
+    @Then("client can view her purchase details")
+    public void clientCanViewHerPurchaseDetails() {
+        shopResultServices.verifyResultsPurchase();
+    }
+}

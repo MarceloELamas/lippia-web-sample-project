@@ -64,4 +64,18 @@ public class shopResultServices extends ActionManager {
         }
 
     }
+    private static WebElement purchaseDetailText() {
+
+        return getElement(shopConstants.ORDERDETAILS_TEXT);
+    }
+
+    public static boolean getStatsDetailOrder() {
+
+        return purchaseDetailText().isDisplayed();
+    }
+
+    public static void verifyResultsPurchase(){
+        Assert.assertTrue(getStatsDetailOrder());
+    }
+
 }
