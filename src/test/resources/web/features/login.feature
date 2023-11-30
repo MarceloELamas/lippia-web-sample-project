@@ -3,7 +3,7 @@ Feature: My Account - Login
 
   Background:
     Given the client is on page Automation
-  @testCase1Login @Smoke
+  @testCase1Login
   Scenario: Login OK
     When the client Clicks on My Account
     When the client enter marcelolamas2495+48@gmail.com in Login textbox
@@ -23,7 +23,8 @@ Feature: My Account - Login
     Examples:
       | emailAddress     | password      | fail         | message                                                   |
       | lalala@gmail.com | P@ssw@rd2025! | Invalid Mail | Error: A user could not be found with this email address. |
-    @testCase3Login
+
+    @testCase7Login @tpFinal
     Examples:
-      | emailAddress                  | password | fail             | message                                                                                                          |
-      | marcelolamas2495+48@gmail.com | lalala   | Invalid Password | Error: The password you entered for the username marcelolamas2495+48@gmail.com is incorrect. Lost your password? |
+      | emailAddress                  | password      | fail             | message                                                                                                          |
+      | marcelolamas2495+48@gmail.com | p@SSw@RD2025! | Invalid Password | Error: The password you entered for the username marcelolamas2495+48@gmail.com is incorrect. Lost your password? |
