@@ -15,4 +15,12 @@ public class loginResultService extends ActionManager {
     public static void verifyMessage(String message) {
         Assert.assertEquals(message,getMessageLogin());
     }
+
+    public static void verifyLoginText() {
+        Assert.assertEquals("Login",getTextLogin());
+    }
+
+    public static String getTextLogin(){
+        return getText(loginConstants.LOGIN_TEXT);
+    }
 }

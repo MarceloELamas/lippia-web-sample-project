@@ -16,4 +16,9 @@ public class loginService extends ActionManager {
         ActionManager.waitVisibility(loginConstants.LOGIN);
         click(loginConstants.LOGIN);
     }
+
+    public static void clickOnLogout() {
+        ActionManager.waitVisibility(loginConstants.LOGOUT);
+        click(loginConstants.LOGOUT);
+    }
 }

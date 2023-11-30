@@ -41,4 +41,13 @@ public class loginSteps extends PageSteps {
     public void theClientCanViewTheMessageInLoginPage(String message) {
         loginResultService.verifyMessage(message);
     }
+
+    @And("the client Clicks on Logout")
+    public void theClientClicksOnLogout() {
+            loginService.clickOnLogout();}
+
+    @Then("the client can view the text LOGIN in page")
+    public void theClientCanViewTheTextLOGINInPage() {
+        loginResultService.verifyLoginText();
+    }
 }
