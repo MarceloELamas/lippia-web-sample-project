@@ -3,7 +3,7 @@ Feature: My Account - Login
 
   Background:
     Given the client is on page Automation
-  @testCase1Login
+  @testCase1Login @Smoke
   Scenario: Login OK
     When the client Clicks on My Account
     When the client enter marcelolamas2495+48@gmail.com in Login textbox
